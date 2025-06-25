@@ -12,33 +12,31 @@ class HomeProduct extends StatelessWidget {
   Widget build(BuildContext context) {
     final product = ProductModel.products[index];
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15.0).w,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(5.r),
-            ),
-
-            child: Image.asset(product.image),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        
+        Container(
+          clipBehavior: Clip.antiAlias,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(5.r ),
           ),
-          verticalSpace(10),
-          CustomText(text: product.name, fontWeight: FontWeight.bold),
-          verticalSpace(5),
-          CustomText(
-            text: product.description,
-            color: Color(0xffF9F9F9),
-            fontSize: 10.sp,
-          ),
-
-          verticalSpace(10),
-          CustomText(text: '\$${product.price}', fontSize: 15.sp),
-        ],
-      ),
+    
+          child: Image.asset(product.image),
+        ),
+        verticalSpace(10),
+        CustomText(text: product.name, fontWeight: FontWeight.bold),
+        verticalSpace(5),
+        CustomText(
+          text: product.description,
+          color: Color(0xffF9F9F9),
+          fontSize: 10.sp,
+        ),
+    
+        verticalSpace(10),
+        CustomText(text: '\$${product.price}', fontSize: 15.sp),
+      ],
     );
   }
 }

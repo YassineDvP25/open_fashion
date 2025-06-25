@@ -5,6 +5,4 @@ void main() {
   runApp(const FashionApp());
 }
 
-features/home_screen
 
- development

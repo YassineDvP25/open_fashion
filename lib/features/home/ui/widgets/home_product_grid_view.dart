@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:open__fashion__app/core/components/text.dart';
-import 'package:open__fashion__app/core/helpers/spacing.dart';
+
 import 'package:open__fashion__app/features/home/data/product_model.dart';
 import 'package:open__fashion__app/features/home/ui/widgets/home_product.dart';
 
@@ -17,9 +16,9 @@ class HomeProductGridView extends StatelessWidget {
 
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        mainAxisSpacing: 0.w,
-        crossAxisSpacing: 2.w,
-        childAspectRatio: 0.6,
+        mainAxisSpacing: 10.w,
+        crossAxisSpacing: 20.w,
+        childAspectRatio: 0.55,
       ),
       itemBuilder: (context, index) {
         return HomeProduct(index: index);

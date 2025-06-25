@@ -4,6 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:open__fashion__app/core/helpers/spacing.dart';
 import 'package:open__fashion__app/core/theming/colors/app_colors.dart';
 import 'package:open__fashion__app/core/widgets/custom_app_bar.dart';
+import 'package:open__fashion__app/features/home/ui/widgets/home_display_image.dart';
+import 'package:open__fashion__app/features/home/ui/widgets/home_product_grid_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -34,15 +36,16 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          Column(
-            children: [
-              verticalSpace(115),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0).w,
-                child: Image.asset('assets/cover/image 20.png'),
-              )
-            ],
-          )
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                verticalSpace(115),
+                HomeDisplayImage(),
+                verticalSpace(20),
+                HomeProductGridView(),
+              ],
+            ),
+          ),
         ],
       ),
     );

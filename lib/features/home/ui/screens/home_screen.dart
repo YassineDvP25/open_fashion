@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:open__fashion__app/core/helpers/spacing.dart';
+import 'package:open__fashion__app/core/helpers/textstyles.dart';
 import 'package:open__fashion__app/core/theming/colors/app_colors.dart';
 import 'package:open__fashion__app/core/widgets/custom_app_bar.dart';
+import 'package:open__fashion__app/features/home/ui/widgets/home_display_image.dart';
+import 'package:open__fashion__app/features/home/ui/widgets/home_product_grid_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -34,15 +37,29 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          Column(
-            children: [
-              verticalSpace(115),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0).w,
-                child: Image.asset('assets/cover/image 20.png'),
-              )
-            ],
-          )
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15.0).w,
+              child: Column(
+                children: [
+                  verticalSpace(115),
+                  HomeDisplayImage(),
+                  verticalSpace(20),
+                  HomeProductGridView(),
+
+                  verticalSpace(50),
+                  Text(
+                    'You may also like'.toUpperCase(),
+                    style: TextStyles.whiteFont25TenorSans
+                  ),
+                  verticalSpace(10),
+                  SvgPicture.asset('assets/texts/home_devider.svg',width: 160.w,),
+                  verticalSpace(50),
+                  
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );

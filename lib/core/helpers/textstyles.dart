@@ -5,7 +5,7 @@ class TextStyles {
   static final whiteFont25TenorSans = TextStyle(
     letterSpacing: 2.w,
     color: Colors.white,
-    fontSize: 25.0.sp,
+    fontSize: 23.0.sp,
     fontFamily: 'TenorSans',
   );
 }

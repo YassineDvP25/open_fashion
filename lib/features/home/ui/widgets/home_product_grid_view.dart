@@ -10,15 +10,16 @@ class HomeProductGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+      
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: ProductModel.products.length,
 
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        mainAxisSpacing: 10.w,
+        mainAxisSpacing: 20.w,
         crossAxisSpacing: 20.w,
-        childAspectRatio: 0.55,
+        childAspectRatio: 0.50,
       ),
       itemBuilder: (context, index) {
         return HomeProduct(index: index);

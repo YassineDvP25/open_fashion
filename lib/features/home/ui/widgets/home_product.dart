@@ -12,6 +12,7 @@ class HomeProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final product = ProductModel.products[index];
+    
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

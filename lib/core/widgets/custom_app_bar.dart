@@ -12,7 +12,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     bool isBlack = true;
     // this for svg color filter
     ColorFilter appBarWidgetsColor =
@@ -20,7 +19,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             ? AppColors.mainWhiteColorFilter
             : AppColors.mainBlackColorFilter;
 
-            
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15.0).w,
       child: AppBar(

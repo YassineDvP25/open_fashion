@@ -12,6 +12,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     bool isBlack = true;
     // this for svg color filter
     ColorFilter appBarWidgetsColor =

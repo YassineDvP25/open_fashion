@@ -13,6 +13,7 @@ class HomeProductPriceAndRating extends StatelessWidget {
     return Row(
       children: [
         Row(
+          
           children: [
             CustomText(text: '\$${product.price}', fontSize: 15.sp),
             horizantalSpace(3),

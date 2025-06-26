@@ -23,7 +23,7 @@ class CustomText extends StatelessWidget {
         fontFamily: 'TenorSans',
       ),
       
-      maxLines: 2,
+      maxLines: 1,
       textAlign: TextAlign.start,
     );
   }

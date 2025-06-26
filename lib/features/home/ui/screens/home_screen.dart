@@ -5,7 +5,6 @@ import 'package:open__fashion__app/core/helpers/spacing.dart';
 import 'package:open__fashion__app/core/helpers/textstyles.dart';
 import 'package:open__fashion__app/core/theming/colors/app_colors.dart';
 import 'package:open__fashion__app/core/widgets/custom_app_bar.dart';
-import 'package:open__fashion__app/features/home/ui/widgets/home_covers_list_view.dart';
 import 'package:open__fashion__app/features/home/ui/widgets/home_display_image.dart';
 import 'package:open__fashion__app/features/home/ui/widgets/home_product_grid_view.dart';
 
@@ -56,8 +55,7 @@ class HomeScreen extends StatelessWidget {
                   verticalSpace(10),
                   SvgPicture.asset('assets/texts/home_devider.svg',width: 160.w,),
                   verticalSpace(50),
-                  HomeCoversListView()
-
+                  
                 ],
               ),
             ),

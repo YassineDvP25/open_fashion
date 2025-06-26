@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:open__fashion__app/core/components/text.dart';
 import 'package:open__fashion__app/core/helpers/spacing.dart';
 import 'package:open__fashion__app/features/home/data/product_model.dart';
+import 'package:open__fashion__app/features/home/ui/widgets/home_product_image.dart';
 import 'package:open__fashion__app/features/home/ui/widgets/home_product_price_and_rating.dart';
 
 class HomeProduct extends StatelessWidget {
@@ -13,20 +14,11 @@ class HomeProduct extends StatelessWidget {
   Widget build(BuildContext context) {
     final product = ProductModel.products[index];
 
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          width: 200.w,
-          height: 210.h,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            image: DecorationImage(
-              image: AssetImage(product.image),
-              fit: BoxFit.fill,
-            ),
-          ),
-        ),
+      HomeProductImage(product: product),
 
         verticalSpace(10),
         CustomText(

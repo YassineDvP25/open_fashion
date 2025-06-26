@@ -20,7 +20,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             ? AppColors.mainWhiteColorFilter
             : AppColors.mainBlackColorFilter;
 
-            
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15.0).w,
       child: AppBar(

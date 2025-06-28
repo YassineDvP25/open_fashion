@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:open__fashion__app/core/helpers/spacing.dart';
+import 'package:open__fashion__app/core/theming/colors/app_colors.dart';
 import 'package:open__fashion__app/features/home/data/covers_model.dart';
 
 class HomeCoversListView extends StatelessWidget {
@@ -11,6 +12,7 @@ class HomeCoversListView extends StatelessWidget {
     return SizedBox(
       height: 460.h,
       child: ListView.builder(
+        padding: EdgeInsets.symmetric(horizontal:   20).w,
         scrollDirection: Axis.horizontal,
         itemCount: CoverModel.covers.length,
         itemBuilder: (context, index) {
@@ -18,21 +20,21 @@ class HomeCoversListView extends StatelessWidget {
           return Column(
             children: [
               Expanded(
-                flex: 10,
+                flex: 9,
                 child: Container(
                   height: 200.h,
                   width: 310.w,
-                  padding: EdgeInsets.symmetric(horizontal: 10).w,
+                  padding: EdgeInsets.symmetric(horizontal:   5).w,
                   clipBehavior: Clip.antiAlias,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30)
                   ),
                   
                   child: Container(
-                    width: 270, // نفس العرض من Figma
-                    height: 300, // نفس الارتفاع من Figma
+                    width: 270, 
+                    height: 300, 
                     decoration: BoxDecoration(
-                      color: Colors.black, // خلفية سوداء مثل التصميم
+                      color: Colors.black, 
                       image: DecorationImage(
                         image: AssetImage(
                           cover.image,
@@ -49,15 +51,21 @@ class HomeCoversListView extends StatelessWidget {
 
               Expanded(
                 flex: 1,
-                child: Text(
-                  cover.name.toUpperCase(),
-                  style: TextStyle(
-                    fontFamily: 'TenorSans',
-                    color: Colors.white,
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 1.5,
-                  ),
+                child: Column(
+                  children: [
+                    Text(
+                      cover.name.toUpperCase(),
+                      style: TextStyle(
+                        fontFamily: 'TenorSans',
+                        color: AppColors.mainGrey,
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 1.5,
+                      ),
+                    ),
+                    verticalSpace(5),
+                    Image.asset('assets/cover/divider2.png',scale: 9,)
+                  ],
                 ),
               ),
             ],

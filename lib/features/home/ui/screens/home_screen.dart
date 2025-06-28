@@ -5,6 +5,8 @@ import 'package:open__fashion__app/core/helpers/spacing.dart';
 import 'package:open__fashion__app/core/helpers/textstyles.dart';
 import 'package:open__fashion__app/core/theming/colors/app_colors.dart';
 import 'package:open__fashion__app/core/widgets/custom_app_bar.dart';
+import 'package:open__fashion__app/features/home/ui/widgets/home_bottom_app_information.dart';
+import 'package:open__fashion__app/features/home/ui/widgets/home_copy_right_information.dart';
 import 'package:open__fashion__app/features/home/ui/widgets/home_covers_list_view.dart';
 import 'package:open__fashion__app/features/home/ui/widgets/home_display_image.dart';
 import 'package:open__fashion__app/features/home/ui/widgets/home_product_grid_view.dart';
@@ -39,27 +41,45 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15.0).w,
-              child: Column(
-                children: [
-                  verticalSpace(115),
-                  HomeDisplayImage(),
-                  verticalSpace(20),
-                  HomeProductGridView(),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15.0).w,
+                  child: Column(
+                    children: [
+                      verticalSpace(115),
+                      HomeDisplayImage(),
+                      Image.asset('assets/cover/divider3.png',color: AppColors.mainGrey,),
+                                            verticalSpace(20),
 
-                  verticalSpace(50),
-                  Text(
-                    'You may also like'.toUpperCase(),
-                    style: TextStyles.whiteFont25TenorSans
+                      HomeProductGridView(),
+
+                      verticalSpace(50),
+                      Text(
+                        'You may also like'.toUpperCase(),
+                        style: TextStyles.whiteFont25TenorSans,
+                      ),
+                      verticalSpace(10),
+                      SvgPicture.asset(
+                        'assets/texts/home_devider.svg',
+                        width: 160.w,
+                      ),
+                      verticalSpace(50),
+                      HomeCoversListView(),
+                      verticalSpace(40),
+                      Image.asset(
+                        'assets/cover/divider.png',
+                        color: Colors.white,
+                      ),
+                      verticalSpace(30),
+                      // this for the bottom app information
+                      HomeBottomAppInformation(),
+                    ],
                   ),
-                  verticalSpace(10),
-                  SvgPicture.asset('assets/texts/home_devider.svg',width: 160.w,),
-                  verticalSpace(50),
-                  HomeCoversListView()
-
-                ],
-              ),
+                ),
+                // for the bottom copyright information
+                HomeCopyRightInformation(),
+              ],
             ),
           ),
         ],

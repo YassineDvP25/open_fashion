@@ -8,4 +8,16 @@ class TextStyles {
     fontSize: 23.0.sp,
     fontFamily: 'TenorSans',
   );
+  static final whiteFont13TenorSans = TextStyle(
+    letterSpacing: 1.5.w,
+    color: Colors.white,
+    fontSize: 13.0.sp,
+    fontFamily: 'TenorSans',
+  );
+  static final whiteFont10TenorSans = TextStyle(
+    letterSpacing: 1.5.w,
+    color: Colors.white,
+    fontSize: 10.0.sp,
+    fontFamily: 'TenorSans',
+  );
 }

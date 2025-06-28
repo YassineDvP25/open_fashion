@@ -11,4 +11,5 @@ class AppColors {
     mainWhite,
     BlendMode.srcIn,
   );
+  static const mainGrey = Color(0xffC5C5C5);
 }

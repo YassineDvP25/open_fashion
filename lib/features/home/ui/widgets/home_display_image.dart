@@ -6,25 +6,15 @@ class HomeDisplayImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          clipBehavior: Clip.antiAlias,
-    
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(10.r),
-          ),
-          child: Image.asset('assets/cover/cover4.jpeg')),
-        // Positioned(
-        //   right: -10.w,
-        //   bottom: 15.h,
-        //   left: 120.w,
-        //   top: 250.h,
-    
-        //   child: SvgPicture.asset('assets/texts/11.svg'),
-        // ),
-      ],
+    return Container(
+      height: 500.h,
+      clipBehavior: Clip.antiAlias,
+
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(30.r),
+      ),
+      child: Image.asset('assets/images/cover1.jpeg'),
     );
   }
 }

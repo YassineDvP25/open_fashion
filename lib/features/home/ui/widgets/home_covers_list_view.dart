@@ -64,7 +64,7 @@ class HomeCoversListView extends StatelessWidget {
                       ),
                     ),
                     verticalSpace(5),
-                    Image.asset('assets/cover/divider2.png',scale: 9,)
+                    Image.asset('assets/images/divider2.png',scale: 9,)
                   ],
                 ),
               ),

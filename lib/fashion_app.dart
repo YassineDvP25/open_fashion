@@ -9,7 +9,12 @@ class FashionApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: Size(375, 812),
-      child: MaterialApp(debugShowCheckedModeBanner: false, home: HomeScreen()),
+      child: MaterialApp(
+        theme: ThemeData(scaffoldBackgroundColor: Colors.white),
+
+        debugShowCheckedModeBanner: false,
+        home: HomeScreen(),
+      ),
     );
   }
 }

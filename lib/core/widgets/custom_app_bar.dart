@@ -5,15 +5,15 @@ import 'package:open__fashion__app/core/helpers/spacing.dart';
 import 'package:open__fashion__app/core/theming/colors/app_colors.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key});
+   final  bool isBlacke ;
+  const CustomAppBar({super.key , required this.isBlacke});
 
   @override
   Size get preferredSize => Size.fromHeight(40.h);
 
   @override
   Widget build(BuildContext context) {
-    
-    bool isBlack = true;
+    bool isBlack = isBlacke;
     // this for svg color filter
     ColorFilter appBarWidgetsColor =
         isBlack == true
@@ -21,7 +21,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             : AppColors.mainBlackColorFilter;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15.0).w,
+      padding: const EdgeInsets.symmetric(horizontal: 10.0).w,
       child: AppBar(
         centerTitle: true,
 

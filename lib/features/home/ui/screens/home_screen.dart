@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.mainBlack,
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(isBlacke: true,),
       body: Stack(
         children: [
           Positioned(
@@ -49,8 +49,14 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       verticalSpace(115),
                       HomeDisplayImage(),
-                      Image.asset('assets/cover/divider3.png',color: AppColors.mainGrey,),
-                                            verticalSpace(20),
+                      verticalSpace(20),
+
+                      Image.asset(
+                        'assets/images/divider3.png',
+                        color: Colors.grey.shade500,
+                        width: 270.w,
+                      ),
+                      verticalSpace(20),
 
                       HomeProductGridView(),
 

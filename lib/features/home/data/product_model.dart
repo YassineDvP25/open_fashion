@@ -30,13 +30,13 @@ class ProductModel {
       description: 'timeless piece that never goes out of style',
     ),
     ProductModel(
-      image: 'assets/product/prod17.jpeg',
+      image: 'assets/product/prod8.jpeg',
       name: 'Black Crop Top',
       price: '500',
       description: 'designed for everyday wear with a touch of elegance',
     ),
     ProductModel(
-      image: 'assets/product/prod8.jpeg',
+      image: 'assets/product/prod17.jpeg',
       name: 'Black Combat Boots',
       price: '1200',
       description: 'perfect for special occasions with its luxurious fabric',

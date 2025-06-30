@@ -40,6 +40,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         actions: [
           SvgPicture.asset(
             'assets/svgs/Search.svg',
+            
             colorFilter: appBarWidgetsColor,
           ),
           horizantalSpace(10),

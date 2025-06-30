@@ -2,19 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:open__fashion__app/features/home/data/product_model.dart';
 
-class HomeProductImage extends StatelessWidget {
-  final ProductModel product;
-  const HomeProductImage({super.key, required this.product});
+class CheckoutProductImage extends StatelessWidget {
+final   ProductModel product;
+  const CheckoutProductImage({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Container(
-          width: 200.w,
-          height: 210.h,
+          width: 100.w,
+          height: 130.h,
           decoration: BoxDecoration(
-            
             borderRadius: BorderRadius.circular(10),
             image: DecorationImage(
               image: AssetImage(product.image),
@@ -23,8 +22,8 @@ class HomeProductImage extends StatelessWidget {
           ),
         ),
         Container(
-          width: 200.w,
-          height: 210.h,
+          width: 100.w,
+          height: 130.h,
           decoration: BoxDecoration(
             color: Colors.black.withValues(alpha: 0.15),
             borderRadius: BorderRadius.circular(10),

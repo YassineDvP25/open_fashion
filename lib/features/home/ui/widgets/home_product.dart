@@ -32,8 +32,10 @@ class HomeProduct extends StatelessWidget {
             text: product.description,
             color: Color(0xffF9F9F9),
             fontSize: 10.sp,
+            maxLine: 1,
+            overFlow: TextOverflow.ellipsis
           ),
-          verticalSpace(10),
+          verticalSpace(20),
           CustomText(text: product.name, fontWeight: FontWeight.bold),
           verticalSpace(5),
 

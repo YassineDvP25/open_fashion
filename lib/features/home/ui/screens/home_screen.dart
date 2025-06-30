@@ -72,9 +72,9 @@ class HomeScreen extends StatelessWidget {
                       ),
                       verticalSpace(50),
                       HomeCoversListView(),
-                      verticalSpace(40),
+                      verticalSpace(80),
                       Image.asset(
-                        'assets/cover/divider.png',
+                        'assets/images/divider.png',
                         color: Colors.white,
                       ),
                       verticalSpace(30),

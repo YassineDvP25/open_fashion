@@ -6,13 +6,17 @@ class CustomText extends StatelessWidget {
   final double fontSize;
   final Color color;
   final double letterSpace;
+  final TextOverflow overFlow;
+  final int maxLine;
   const CustomText({
     super.key,
     required this.text,
     this.fontWeight = FontWeight.normal,
     this.fontSize = 16.0,
     this.color = Colors.white,
-     this.letterSpace = 0.0,
+    this.letterSpace = 0.0,
+    this.overFlow = TextOverflow.ellipsis,
+    this.maxLine = 1
   });
 
   @override
@@ -26,9 +30,10 @@ class CustomText extends StatelessWidget {
         fontSize: fontSize,
         color: color,
         fontFamily: 'TenorSans',
+        overflow: overFlow,
       ),
 
-      maxLines: 2,
+      maxLines: maxLine,
       textAlign: TextAlign.start,
     );
   }

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:open__fashion__app/core/components/text.dart';
-import 'package:open__fashion__app/core/helpers/spacing.dart';
+import 'package:open__fashion__app/core/theming/colors/app_colors.dart';
 
 class Header extends StatelessWidget {
   final String text;
@@ -11,12 +10,13 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CustomText(text: text, letterSpace: 3,),
-        verticalSpace(20),
-        SvgPicture.asset('assets/texts/home_devider.svg', width: 160.w),
-      ],
+    return Center(
+      child: Column(
+        children: [
+          CustomText(text: text, letterSpace: 6,color: Colors.black,fontSize: 23.sp,fontWeight: FontWeight.w400),
+          Image.asset('assets/images/divider2.png', width: 125.w,color: AppColors.mainBlack,),
+        ],
+      ),
     );
   }
 }

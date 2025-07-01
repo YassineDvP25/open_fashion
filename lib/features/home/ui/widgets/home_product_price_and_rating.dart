@@ -36,7 +36,7 @@ class HomeProductPriceAndRating extends StatelessWidget {
             horizantalSpace(3),
             CustomText(
               text:
-                  '${product.price[0]}.${int.parse(product.price[0]) > 0 ? int.parse(product.price[0]) - 3 : 0}'
+                  '${product.price[0]}.${int.parse(product.price[0]) > 0 ? int.parse(product.price[0]) + 2 : 0}'
                       .toString(),
               fontSize: 10.sp,
             ),

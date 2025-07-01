@@ -8,29 +8,32 @@ class HomeProductImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          width: 200.w,
-          height: 210.h,
-          decoration: BoxDecoration(
-            
-            borderRadius: BorderRadius.circular(10),
-            image: DecorationImage(
-              image: AssetImage(product.image),
-              fit: BoxFit.fill,
+    return Hero(
+      tag: product.id,
+      child: Stack(
+        children: [
+          Container(
+            width: 200.w,
+            height: 210.h,
+            decoration: BoxDecoration(
+              
+              borderRadius: BorderRadius.circular(10),
+              image: DecorationImage(
+                image: AssetImage(product.image),
+                fit: BoxFit.fill,
+              ),
             ),
           ),
-        ),
-        Container(
-          width: 200.w,
-          height: 210.h,
-          decoration: BoxDecoration(
-            color: Colors.black.withValues(alpha: 0.15),
-            borderRadius: BorderRadius.circular(10),
+          Container(
+            width: 200.w,
+            height: 210.h,
+            decoration: BoxDecoration(
+              color: Colors.black.withValues(alpha: 0.15),
+              borderRadius: BorderRadius.circular(10),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

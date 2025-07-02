@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:open__fashion__app/core/components/text.dart';
 import 'package:open__fashion__app/core/helpers/spacing.dart';
-import 'package:open__fashion__app/features/chekout/ui/screens/chekout.dart';
+import 'package:open__fashion__app/features/chekout/ui/screens/checkout_screen.dart';
 import 'package:open__fashion__app/features/home/data/product_model.dart';
 import 'package:open__fashion__app/features/home/ui/widgets/home_product_image.dart';
 import 'package:open__fashion__app/features/home/ui/widgets/home_product_price_and_rating.dart';

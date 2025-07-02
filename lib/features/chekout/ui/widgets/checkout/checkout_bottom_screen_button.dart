@@ -8,7 +8,12 @@ class CheckoutBottomScreenButton extends StatelessWidget {
   final String text;
   final bool isSvgg;
   final VoidCallback? onTap;
-  const CheckoutBottomScreenButton({super.key, required this.isSvgg, required this.text, this.onTap});
+  const CheckoutBottomScreenButton({
+    super.key,
+    required this.isSvgg,
+    required this.text,
+    this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +29,7 @@ class CheckoutBottomScreenButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               isSvg
-                  ?   SvgPicture.asset('assets/svgs/shopping bag.svg')
+                  ? SvgPicture.asset('assets/svgs/shopping bag.svg')
                   : const SizedBox.shrink(),
               horizantalSpace(15),
               CustomText(

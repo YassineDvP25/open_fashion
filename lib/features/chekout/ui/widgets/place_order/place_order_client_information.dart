@@ -5,53 +5,71 @@ import 'package:open__fashion__app/core/helpers/spacing.dart';
 import 'package:open__fashion__app/core/theming/colors/app_colors.dart';
 
 class PlaceOrderClientInformation extends StatelessWidget {
-  const PlaceOrderClientInformation({super.key});
+  final String clientFirstName;
+  final String clientLastName;
+  final String adress;
+  final String city;
+  final String state;
+  final String zipCode;
+  final String phoneNumber;
+  const PlaceOrderClientInformation({
+    super.key,
+    required this.clientFirstName,
+    required this.clientLastName,
+    required this.adress,
+    required this.city,
+    required this.state,
+    required this.zipCode,
+    required this.phoneNumber,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return   Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 10).w,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 10).w,
 
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
+      child: GestureDetector(
+        onTap: () {
+          Navigator.pop(context);
+        },
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
 
-                                children: [
-                                  CustomText(
-                                    text: 'Iris Watson',
-                                    color: AppColors.mainDarkGrey,
-                                    fontSize: 23,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                  verticalSpace(5),
-                                  CustomText(
-                                    text: '606-3727 Ullamcorper.Street',
-                                    color: AppColors.grayScaleLabel,
-                                  ),
-                                  verticalSpace(3),
-                                  CustomText(
-                                    text: 'Roseville NH 11523',
-                                    color: AppColors.grayScaleLabel,
-                                  ),
-                                  verticalSpace(3),
+              children: [
+                CustomText(
+                  text: '$clientFirstName $clientLastName',
+                  color: AppColors.mainDarkGrey,
+                  fontSize: 23,
+                  fontWeight: FontWeight.w600,
+                ),
+                verticalSpace(5),
+                CustomText(
+                  text: '$adress $city ',
+                  color: AppColors.grayScaleLabel,
+                ),
+                verticalSpace(3),
+                CustomText(
+                  text: '$state $zipCode',
+                  color: AppColors.grayScaleLabel,
+                ),
+                verticalSpace(3),
 
-                                  CustomText(
-                                    text: '(786) 713-8616',
-                                    color: AppColors.grayScaleLabel,
-                                  ),
-                                ],
-                              ),
-                              Spacer(),
-                              Icon(
-                                Icons.chevron_right,
-                                size: 30,
-                                color: AppColors.grayScaleHoder,
-                              ),
-                            ],
-                          ),
-                        );
+                CustomText(text: phoneNumber, color: AppColors.grayScaleLabel),
+              ],
+            ),
+            Spacer(),
+            Icon(
+              Icons.chevron_right,
+              size: 30,
+              color: AppColors.grayScaleHoder,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

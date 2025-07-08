@@ -5,6 +5,7 @@ import 'package:open__fashion__app/core/helpers/spacing.dart';
 import 'package:open__fashion__app/core/widgets/custom_app_bar.dart';
 import 'package:open__fashion__app/core/widgets/header.dart';
 import 'package:open__fashion__app/features/chekout/logic/cubit/checkout_cubit.dart';
+import 'package:open__fashion__app/features/chekout/ui/screens/shipping_adress.dart';
 import 'package:open__fashion__app/features/chekout/ui/widgets/checkout/checkout_bottom_screen_button.dart';
 import 'package:open__fashion__app/features/chekout/ui/widgets/checkout/checkout_product(name,description,counter,price.dart';
 import 'package:open__fashion__app/features/chekout/ui/widgets/checkout/checkout_product_image.dart';
@@ -95,21 +96,16 @@ class Chekout extends StatelessWidget {
               builder: (context, state) {
                 return CheckoutBottomScreenButton(
                   isSvgg: true,
-                  text: 'Place Order',
+                  text: 'Checkout',
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder:
-                            (route) => PlaceOrderScreen(
-                              image: product.image,
-                              name: product.name,
-                              description: product.description,
-                              price: product.price,
+                            (route) => ShippingAdress(
+                              totalPrice: state.totalPrice,
                               productQuntity: state.quantityCounter,
-                              totalPrice:
-                                  state.quantityCounter *
-                                product.price,
+                              productModel: product,
                             ),
                       ),
                     );

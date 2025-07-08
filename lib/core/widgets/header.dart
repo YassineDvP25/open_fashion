@@ -13,7 +13,7 @@ class Header extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          CustomText(text: text, letterSpace: 6,color: Colors.black,fontSize: 23.sp,fontWeight: FontWeight.w400),
+          CustomText(text: text, letterSpace: 6,color: Colors.black,fontSize: 20.sp,fontWeight: FontWeight.w400),
           Image.asset('assets/images/divider2.png', width: 125.w,color: AppColors.mainBlack,),
         ],
       ),

@@ -39,6 +39,7 @@ dependencies:
   ionicons: ^0.2.2
   flutter_bloc: ^9.1.1
   equatable: ^2.0.7
+  flutter_credit_card: ^4.1.0
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,7 @@ flutter:
     - assets/logo/
     - assets/product/
     - assets/svgs/
+    - assets/svgs/card_brands/
     - assets/texts/
     - assets/fonts/
 
@@ -86,4 +88,8 @@ flutter:
     - family: TenorSans
       fonts:
         - asset: assets/fonts/TenorSans-Regular.ttf
+          style: italic
+    - family: RobotoSlab
+      fonts:
+        - asset: assets/fonts/RobotoSlab-VariableFont_wght.ttf
           style: italic

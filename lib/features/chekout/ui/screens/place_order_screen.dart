@@ -13,7 +13,7 @@ import 'package:open__fashion__app/features/chekout/ui/widgets/place_order/place
 import 'package:open__fashion__app/features/chekout/ui/widgets/place_order/place_order_methode_container.dart';
 import 'package:open__fashion__app/features/home/data/product_model.dart';
 
-class PlaceOrderScreen extends StatelessWidget {
+class PlaceOrder extends StatelessWidget {
   final String clientFirstName;
   final String clientLastName;
   final String adress;
@@ -26,7 +26,7 @@ class PlaceOrderScreen extends StatelessWidget {
 
   final int totalPrice;
   final int productQuntity;
-  const PlaceOrderScreen({
+  const PlaceOrder({
     super.key,
 
     required this.totalPrice,

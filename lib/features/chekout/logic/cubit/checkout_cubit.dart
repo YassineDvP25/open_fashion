@@ -5,15 +5,14 @@ import 'package:meta/meta.dart';
 part 'checkout_state.dart';
 
 class CheckoutCubit extends Cubit<CheckoutState> {
-  CheckoutCubit() : super(CheckoutState(1, 0 , 1));
+  CheckoutCubit() : super(CheckoutState(1, 0, 1));
   quantityCounterIncrement(int price) {
     emit(
       state.copyWith(
         quantityCounter: state.quantityCounter + 1,
         totalPrice: price * (state.quantityCounter + 1),
-        selectedCounter:  state.quantityCounter
+        selectedCounter: state.quantityCounter,
       ),
-      
     );
   }
 
@@ -23,9 +22,11 @@ class CheckoutCubit extends Cubit<CheckoutState> {
         state.copyWith(
           quantityCounter: state.quantityCounter - 1,
           totalPrice: price * (state.quantityCounter - 1),
-          selectedCounter:  state.quantityCounter
+          selectedCounter: state.quantityCounter,
         ),
       );
     }
   }
+
+
 }

@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:open__fashion__app/core/helpers/spacing.dart';
 import 'package:open__fashion__app/core/widgets/custom_app_bar.dart';
 import 'package:open__fashion__app/core/widgets/header.dart';
-import 'package:open__fashion__app/features/chekout/ui/screens/place_order_screen.dart';
+import 'package:open__fashion__app/features/chekout/ui/screens/payment_methode_screen.dart';
 import 'package:open__fashion__app/features/chekout/ui/widgets/checkout/checkout_bottom_screen_button.dart';
 import 'package:open__fashion__app/features/chekout/ui/widgets/shipping_adress_text_form_fields.dart';
 import 'package:open__fashion__app/features/home/data/product_model.dart';
@@ -98,7 +98,7 @@ class _ShippingAdressState extends State<ShippingAdress> {
                     context,
                     MaterialPageRoute(
                       builder:
-                          (context) => PlaceOrder(
+                          (context) => PaymentMethode(
                             productModel: widget.productModel,
                             totalPrice: widget.totalPrice,
                             productQuntity: widget.productQuntity,
@@ -106,7 +106,7 @@ class _ShippingAdressState extends State<ShippingAdress> {
                             clientLastName: _lastName.text,
                             adress: _address.text,
                             city: _city.text,
-                            state: _state.text,
+                            statee: _state.text,
                             zipCode: _zip.text,
                             phoneNumber: _phone.text,
                           ),

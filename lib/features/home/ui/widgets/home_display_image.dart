@@ -12,7 +12,12 @@ class HomeDisplayImage extends StatelessWidget {
 
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(20.r),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20.r),
+          topRight: Radius.circular(20.r),
+          bottomLeft: Radius.circular(5.r),
+          bottomRight: Radius.circular(5.r),
+        ),
       ),
       child: Image.asset('assets/images/cover1.jpeg'),
     );

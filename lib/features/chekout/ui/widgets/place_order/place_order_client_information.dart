@@ -59,6 +59,8 @@ class PlaceOrderClientInformation extends StatelessWidget {
                 verticalSpace(3),
 
                 CustomText(text: phoneNumber, color: AppColors.grayScaleLabel),
+                                verticalSpace(15),
+
               ],
             ),
             Spacer(),

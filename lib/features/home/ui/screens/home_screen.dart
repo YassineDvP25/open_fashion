@@ -49,13 +49,7 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       verticalSpace(115),
                       HomeDisplayImage(),
-                      verticalSpace(20),
-
-                      Image.asset(
-                        'assets/images/divider3.png',
-                        color: Colors.grey.shade500,
-                        width: 270.w,
-                      ),
+                    
                       verticalSpace(20),
 
                       HomeProductGridView(),

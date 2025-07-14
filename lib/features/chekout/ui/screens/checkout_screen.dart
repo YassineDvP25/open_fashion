@@ -3,9 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:open__fashion__app/core/helpers/spacing.dart';
 import 'package:open__fashion__app/core/widgets/custom_app_bar.dart';
+import 'package:open__fashion__app/core/widgets/custom_app_product_cart.dart';
 import 'package:open__fashion__app/core/widgets/header.dart';
 import 'package:open__fashion__app/features/chekout/logic/cubit/checkout_cubit.dart';
-import 'package:open__fashion__app/features/chekout/ui/screens/payment_methode_screen.dart';
+import 'package:open__fashion__app/features/chekout/ui/screens/shipping_adress_screen.dart';
 import 'package:open__fashion__app/features/chekout/ui/widgets/checkout/checkout_bottom_screen_button.dart';
 import 'package:open__fashion__app/features/chekout/ui/widgets/checkout/checkout_product(name,description,counter,price.dart';
 import 'package:open__fashion__app/features/chekout/ui/widgets/checkout/checkout_product_image.dart';
@@ -21,7 +22,6 @@ class Chekout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //media query
-    MediaQueryData mediaQuery = MediaQuery.of(context);
 
     return BlocProvider(
       create: (context) => CheckoutCubit(),
@@ -37,45 +37,8 @@ class Chekout extends StatelessWidget {
                     verticalSpace(25),
                     Header(text: 'Checkout'.toUpperCase() , dividerWidth: 120,),
                     verticalSpace(20),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        //!product image
-                        CheckoutProductImage(product: product),
-
-                        Container(
-                          padding: EdgeInsets.symmetric(horizontal: 10).w,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              verticalSpace(10),
-
-                              //!prduct name
-                              CheckoutProductName(
-                                product: product,
-                                sizedBoxWith: mediaQuery.size.width * 0.5,
-                              ),
-
-                              verticalSpace(5),
-                              //!product description
-                              CheckoutProductDesciption(
-                                product: product,
-                                sizedBoxWith: mediaQuery.size.width * 0.5,
-                              ),
-
-                              verticalSpace(10),
-                              //!product counter
-                              ProductsCounter(price: product.price),
-
-                              verticalSpace(10),
-                              //!product price
-                              CheckoutProductPrice(product: product),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                    //!Custom app product cart
+                    CustomAppProductCart(product: product),
 
                     verticalSpace(10),
                     //!checkout promo and delivery
@@ -101,12 +64,11 @@ class Chekout extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder:
-                            (route) => PaymentMethode()
-                            // ShippingAdress(
-                            //   totalPrice: state.totalPrice,
-                            //   productQuntity: state.quantityCounter,
-                            //   productModel: product,
-                            // ),
+                            (route) =>  ShippingAdress(
+                              totalPrice: state.totalPrice,
+                              productQuntity: state.quantityCounter,
+                              productModel: product,
+                            ),
                       ),
                     );
                   },

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
-import 'package:open__fashion__app/features/chekout/ui/widgets/payment/cubit/credit_card_cubit.dart';
+import 'package:open__fashion__app/features/chekout/logic/cubit/checkout_cubit.dart';
 
 class CreditCardeForm extends StatelessWidget {
   final GlobalKey<FormState> formKey ;
@@ -9,9 +9,10 @@ class CreditCardeForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<CreditCardCubit, CreditCardState>(
+    return BlocBuilder<CheckoutCubit, CheckoutState>(
       builder: (context, state) {
         return CreditCardForm(
+          
           inputConfiguration: InputConfiguration(
             expiryDateTextStyle: TextStyle(fontFamily: 'RobotoSlab', fontSize: 14),
 
@@ -21,9 +22,10 @@ class CreditCardeForm extends StatelessWidget {
           expiryDate: state.expiryDate,
           cardHolderName: state.cardHolderName,
           cvvCode: state.cvvCode,
+          
 
           onCreditCardModelChange: (CreditCardModel data) {
-            context.read<CreditCardCubit>().onCreditCardModelChange(data);
+            context.read<CheckoutCubit>().onCreditCardModelChange(data);
           },
           formKey: formKey,
         );

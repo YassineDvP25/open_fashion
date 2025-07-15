@@ -28,6 +28,10 @@ An elegant fashion e-commerce mobile app designed for seamless shopping experien
 ### 💳 Payment Method
 <img width="1480" height="2740" alt="fashionappscreen_5" src="https://github.com/user-attachments/assets/3aec7ee1-db8a-44d6-bc47-21535783cf74" />
 
+### 🎥 Screen recording
+https://github.com/user-attachments/assets/b4fc41cc-74a5-4596-9ff4-1c8b53aa2577
+
+
 ### ✅ Order Checkout
 <img width="1480" height="2740" alt="fashionappscreen_6" src="https://github.com/user-attachments/assets/f627b727-7ddb-40f1-8108-d0942942f940" />
 

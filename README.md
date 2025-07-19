@@ -59,7 +59,7 @@ https://github.com/user-attachments/assets/b4fc41cc-74a5-4596-9ff4-1c8b53aa2577
 ## 🛠️ Tech Stack
 
 - **Flutter (Dart)** – UI Framework
-- **Bloc** – State management (حدد ما استخدمته)
+- **State management** – Bloc
 - **Clean Architecture** – Organized, scalable codebase
 
 #### الحمد لله رب العالمين

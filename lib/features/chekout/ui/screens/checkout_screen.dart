@@ -8,11 +8,8 @@ import 'package:open__fashion__app/core/widgets/header.dart';
 import 'package:open__fashion__app/features/chekout/logic/cubit/checkout_cubit.dart';
 import 'package:open__fashion__app/features/chekout/ui/screens/shipping_adress_screen.dart';
 import 'package:open__fashion__app/features/chekout/ui/widgets/checkout/checkout_bottom_screen_button.dart';
-import 'package:open__fashion__app/features/chekout/ui/widgets/checkout/checkout_product(name,description,counter,price.dart';
-import 'package:open__fashion__app/features/chekout/ui/widgets/checkout/checkout_product_image.dart';
 import 'package:open__fashion__app/features/chekout/ui/widgets/checkout/checkout_product_price_total.dart';
 import 'package:open__fashion__app/features/chekout/ui/widgets/checkout/checkout_promo_and_delevery.dart';
-import 'package:open__fashion__app/features/chekout/ui/widgets/checkout/products_counter.dart';
 import 'package:open__fashion__app/features/home/data/product_model.dart';
 
 class Chekout extends StatelessWidget {
@@ -35,7 +32,7 @@ class Chekout extends StatelessWidget {
                 child: Column(
                   children: [
                     verticalSpace(25),
-                    Header(text: 'Checkout'.toUpperCase() , dividerWidth: 120,),
+                    Header(text: 'Checkout'.toUpperCase(), dividerWidth: 120),
                     verticalSpace(20),
                     //!Custom app product cart
                     CustomAppProductCart(product: product),
@@ -64,10 +61,20 @@ class Chekout extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder:
-                            (route) =>  ShippingAdress(
+                            (route) => ShippingAdress(
                               totalPrice: state.totalPrice,
                               productQuntity: state.quantityCounter,
                               productModel: product,
+                              clientInformation: {
+                                'clientFirstName': '',
+                                'clientLastName': '',
+                                'adress': '',
+                                'city': '',
+                                'state': '',
+                                'zipCode': '',
+                                'phoneNumber': '',
+                              },
+                              previousRoute: 'Chekout' ,
                             ),
                       ),
                     );

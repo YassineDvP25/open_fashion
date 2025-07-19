@@ -94,11 +94,12 @@ class PaymentMethode extends StatelessWidget {
                                 clientLastName: clientLastName,
                                 adress: adress,
                                 city: city,
-                                state: statee,
+                                statee: statee,
                                 zipCode: zipCode,
                                 phoneNumber: phoneNumber,
                                 creditCardBrand: creditCardBrand,
                                 creditCardNumber: state.cardNumber,
+                                previousRoute: 'PaymentMethode',
                               ),
                         ),
                       );

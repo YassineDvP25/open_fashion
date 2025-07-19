@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                       verticalSpace(115),
                       HomeDisplayImage(),
                     
-                      verticalSpace(20),
+                      verticalSpace(40),
 
                       HomeProductGridView(),
 

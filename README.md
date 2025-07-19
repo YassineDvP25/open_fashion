@@ -19,7 +19,8 @@ An elegant fashion e-commerce mobile app designed for seamless shopping experien
 
 
 ### 📄 Product Info Footer
-![Screenshot_2025-07-15-12-34-39-61_823f90c8e245469f3a9c8a9912bf2b42](https://github.com/user-attachments/assets/eff7e519-d328-402b-9a5d-4c0558ab6d7b)
+<img width="1480" height="2740" alt="Screenshot_2025-07-15-12-34-39-61_823f90c8e245469f3a9c8a9912bf2b42-portrait" src="https://github.com/user-attachments/assets/76722387-6b6a-4e6f-866f-d0c1544cc8ee" />
+
 
 
 ### 📍 Shipping Address

@@ -130,7 +130,7 @@ class PlaceOrder extends StatelessWidget {
             // //!Place Order button
             CheckoutBottomScreenButton(
               isSvgg: true,
-              text: 'Place Order',
+              text: 'Checkout',
               onTap: () {
                 showModalBottomSheet(
                   isDismissible :false,

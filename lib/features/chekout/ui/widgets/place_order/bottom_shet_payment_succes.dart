@@ -46,9 +46,10 @@ class _PaymentSuccessDialogState extends State<BottomShetPaymentSucces> {
                 fontSize: 16,
                 fontWeight: FontWeight.w500),
             verticalSpace(4),
-            const Text(
-              'Payment ID  15263541',
-              style: TextStyle(fontSize: 13, color: Colors.grey),
+            const CustomText(
+              text: 'Payment ID  15263541',
+              color: AppColors.grayScaleLabel,
+              fontSize: 13,
             ),
             const Divider(height: 32),
             const CustomText(

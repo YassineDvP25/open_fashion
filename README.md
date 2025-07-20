@@ -41,6 +41,10 @@ https://github.com/user-attachments/assets/b4fc41cc-74a5-4596-9ff4-1c8b53aa2577
 <img width="1480" height="2740" alt="Screenshot_2025-07-19-12-10-18-27_823f90c8e245469f3a9c8a9912bf2b42-portrait" src="https://github.com/user-attachments/assets/d1339f5b-724b-4c28-a8ae-91343a6d7e07" />
 
 
+### 🎥 Screen Recording
+
+https://github.com/user-attachments/assets/43614b07-034d-4b66-b0ca-b746ee58559c
+
 
 
 ---
